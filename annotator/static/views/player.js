@@ -157,7 +157,13 @@ class PlayerView {
     }
 
     sizeVideoFrame() {
-        if (!this.scaleToFit) {
+        this.scaleToFit = true;
+        this.$('video').css({
+           height: `100%`,
+           'flex-grow': 1
+         });
+
+	if (!this.scaleToFit) {
             var height = this.video.videoHeight;
             if (this.$('video').width() < this.video.videoWidth) {
                 height = height * (this.$('video').width() / this.video.videoWidth);

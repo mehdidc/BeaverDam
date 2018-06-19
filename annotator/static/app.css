@@ -39,6 +39,7 @@
 
 .player-video-container {
     display: flex;
+    height: 10%;
 }
 
 .player-video {
